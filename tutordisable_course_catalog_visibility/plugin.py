@@ -225,11 +225,7 @@ for path in glob(str(importlib_resources.files("tutordisable_course_catalog_visi
 
 # This would allow you to run:
 #   $ tutor disable-course-catalog-visibility example-command
+#hooks.Filters.ENV_PATCHES.add_item(("openedx-common-settings", COURSE_CATALOG_VISIBILITY = "none"'))
 hooks.Filters.ENV_PATCHES.add_item(
-    (
-        "openedx-common-settings",
-        """
-        COURSE_CATALOG_VISIBILITY = "none"
-        """
-    )
+    ("openedx-common-settings", 'COURSE_CATALOG_VISIBILITY = "none"')
 )
