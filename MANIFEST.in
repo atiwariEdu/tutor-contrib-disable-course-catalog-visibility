@@ -1,0 +1,2 @@
+recursive-include tutordisable_course_catalog_visibility/patches *
+recursive-include tutordisable_course_catalog_visibility/templates *
